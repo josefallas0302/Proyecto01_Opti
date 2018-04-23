@@ -28,4 +28,41 @@ for t=1:N
     Zo(t+1) = Zo(t)+1/6 * (k1z+2*k2z+2*k3z+k4z)*h;
 end
 
-surface([Xo(:),Xo(:)],[Yo(:),Yo(:)],[Zo(:),Zo(:)], [t(:),t(:)])
+to = 0:0.0001:100;
+fig= figure(1)
+surface([Xo(:),Xo(:)],[Yo(:),Yo(:)],[Zo(:),Zo(:)], [to(:),to(:)],'EdgeColor','flat')
+grid on
+xlabel('x(t)')
+ylabel('y(t)')
+zlabel('z(t)')
+view(3)
+
+fig= figure(2)
+surface([Xo(:),Xo(:)],[Yo(:),Yo(:)],[Zo(:),Zo(:)], [to(:),to(:)],'EdgeColor','flat')
+grid on
+xlabel('x(t)')
+ylabel('y(t)')
+zlabel('z(t)')
+view(0,0)
+
+fig=figure(3)
+
+surface([Xo(:),Xo(:)],[Yo(:),Yo(:)],[Zo(:),Zo(:)], [to(:),to(:)],'EdgeColor','flat')
+grid on
+xlabel('x(t)')
+ylabel('y(t)')
+zlabel('z(t)')
+view(0,90)
+
+fig=figure(4)
+
+surface([Xo(:),Xo(:)],[Yo(:),Yo(:)],[Zo(:),Zo(:)], [to(:),to(:)],'EdgeColor','flat')
+grid on
+xlabel('x(t)')
+ylabel('y(t)')
+zlabel('z(t)')
+view(90,0)
+
+Xf = Xo(1,end)
+Xf = Xo(1,end)
+Xf = Xo(1,end)
